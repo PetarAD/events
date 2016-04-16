@@ -1,10 +1,12 @@
 <?php
 session_start();
-
+ ?>
+ <?php
  $conn = mysqli_connect('localhost', 'root', '', 'events');
 if (isset($_POST['submit'])) {
     $username=mysqli_real_escape_string($conn, $_POST['username']);
     $password=mysqli_real_escape_string($conn, $_POST['password']);
+    $password=md5($password);
     $_SESSION["username"]=$username;
     $_SESSION["password"]=$password;
     var_dump($_SESSION);
@@ -15,7 +17,7 @@ if (isset($_POST['submit'])) {
   if ($username==$row['username']) {
     if ($password==$row['password']) {
 echo "yes";
-header ('Location:index.php');
+//header ('Location:index.php');
     }
     else {
       echo "You have worng password";
@@ -24,4 +26,3 @@ header ('Location:index.php');
 }
 }
 }
-?>
