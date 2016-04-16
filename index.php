@@ -52,7 +52,7 @@
             <label for="last-name">Фамилия</label>
             <input id="last-name" type="text" name="last-name" placeholder="Въведете фамилия">
           </fieldset>
-          <input type="submit" name="register" value="Регистрирай се">
+          <input type="submit" name="submit" value="Регистрирай се">
         </form>
       </section>
 
