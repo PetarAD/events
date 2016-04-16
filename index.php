@@ -25,7 +25,11 @@
           }
         }
       ?>
-
+      <section class="introduction-notes">
+        <p>
+          Текст
+        </p>
+      </section>
       <section class="register-form">
         <form class="register" action="register.php" method="POST">
           <fieldset>
