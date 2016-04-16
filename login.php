@@ -1,5 +1,6 @@
 <?php
 session_start();
+ //change
  ?>
  <?php
  $conn = mysqli_connect('localhost', 'root', '', 'events');
