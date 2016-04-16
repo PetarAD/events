@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
     $password=md5($password);
     $_SESSION["username"]=$username;
     $_SESSION["password"]=$password;
+
     var_dump($_SESSION);
   $read_query = 	"SELECT * FROM `user`";
   $read_result = mysqli_query($conn, $read_query);
