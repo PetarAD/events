@@ -9,7 +9,7 @@ browserSync = require 'browser-sync'
 # -------------------------------------------------------------
 gulp.task 'browserSync', ->
   browserSync {
-    proxy: 'localhost/share'
+    proxy: 'localhost/events'
     snippetOptions:
       rule:
         match: /$/
@@ -20,5 +20,5 @@ gulp.task 'browserSync', ->
 # -------------------------------------------------------------
 gulp.task 'default', ['browserSync'], ->
   gulp.watch './**/*.php', browserSync.reload
-  gulp.watch './layout/**/*.css', browserSync.reload
+  gulp.watch './layout/**/*.css, !node_modules', browserSync.reload
   gulp.watch './code/**/*.js', browserSync.reload
