@@ -15,6 +15,5 @@ if (!empty($_POST['submit'])) {
     }else{
       echo "Неуспешна регистрация";
     }
-
   }
  ?>
