@@ -13,6 +13,7 @@
   <body>
     <div class="container">
       <?php include './modules/header.php'; ?>
+      <?php include './modules/navigation.php'; ?>
       <?php
         if(isset($_GET['location'])) {
           $locationFile = $_GET['location'];
@@ -24,9 +25,9 @@
           }
         }
       ?>
-      
+
       <section class="register-form">
-        <form class="register" action="login.php" method="POST">
+        <form class="register" action="register.php" method="POST">
           <fieldset>
             <label for="username">Потребителско име</label>
             <input id="username" type="text" name="username" placeholder="Въведете потребителско име.">
