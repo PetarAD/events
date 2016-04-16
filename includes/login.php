@@ -27,3 +27,7 @@ echo "yes";
 }
 }
 }
+<<<<<<< HEAD
+?>
+=======
+>>>>>>> origin/master

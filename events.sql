@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2016 at 08:36 AM
+-- Generation Time: Apr 16, 2016 at 11:26 AM
 -- Server version: 10.1.8-MariaDB
 -- PHP Version: 5.6.14
 
@@ -42,6 +42,7 @@ CREATE TABLE `admin` (
 CREATE TABLE `event` (
   `id` int(10) NOT NULL,
   `name` varchar(300) NOT NULL,
+  `category` varchar(300) NOT NULL,
   `description` text NOT NULL,
   `published` date NOT NULL,
   `date_deleted` date DEFAULT NULL
@@ -51,8 +52,14 @@ CREATE TABLE `event` (
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`id`, `name`, `description`, `published`, `date_deleted`) VALUES
-(1, 'basket', 'basket', '2016-04-20', NULL);
+INSERT INTO `event` (`id`, `name`, `category`, `description`, `published`, `date_deleted`) VALUES
+(2, 'basket', 'sport', 'some thing', '0000-00-00', NULL),
+(3, 'medicine', 'health', 'some thing2', '2016-04-21', NULL),
+(4, 'reading books', 'culture', 'some thing3', '2016-04-21', NULL),
+(5, 'vso', 'scients', 'some thing 4', '2016-04-29', NULL),
+(6, 'voley', 'sport', 'some thing asd', '2016-04-29', NULL),
+(7, '', '', 'igraem', '0000-00-00', NULL),
+(8, '', 'sport', '', '0000-00-00', NULL);
 
 -- --------------------------------------------------------
 
@@ -75,7 +82,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `first_name`, `last_name`, `date_deleted`) VALUES
-(1, 'peet', 'peet', 'peet@asd.bg', 'peet', 'peet', NULL);
+(5, 'new', '22af645d1859cb5ca6da0c484f1f37ea', 'new@a', 'new', 'new', NULL);
 
 --
 -- Indexes for dumped tables
@@ -114,12 +121,12 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
