@@ -13,6 +13,7 @@
   <body>
     <div class="container">
       <?php include './modules/header.php'; ?>
+      <?php include './modules/navigation.php'; ?>
       <?php
         if(isset($_GET['location'])) {
           $locationFile = $_GET['location'];
@@ -24,9 +25,26 @@
           }
         }
       ?>
-      
+      <section class="introduction-notes">
+        <p>
+          Текст
+        </p>
+      </section>
+      <section class="login-form">
+        <form class="login" action="index.php?location=login" method="POST">
+          <fieldset>
+            <label for="username">Потребителско име</label>
+            <input id="username" type="text" name="username" placeholder="Въведете потребителско име.">
+          </fieldset>
+          <fieldset>
+            <label for="password">Парола:</label>
+            <input id="password" type="password" name="password" placeholder="Въведете парола.">
+          </fieldset>
+          <input type="submit" name="submit" value="Влез">
+        </form>
+      </section>
       <section class="register-form">
-        <form class="register" action="login.php" method="POST">
+        <form class="register" action="index.php?location=register" method="POST">
           <fieldset>
             <label for="username">Потребителско име</label>
             <input id="username" type="text" name="username" placeholder="Въведете потребителско име.">
@@ -51,7 +69,7 @@
             <label for="last-name">Фамилия</label>
             <input id="last-name" type="text" name="last-name" placeholder="Въведете фамилия">
           </fieldset>
-          <input type="submit" name="register" value="Регистрирай се">
+          <input type="submit" name="submit" value="Регистрирай се">
         </form>
       </section>
 
