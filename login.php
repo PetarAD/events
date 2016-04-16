@@ -1,8 +1,6 @@
 <?php
 session_start();
- //change
- ?>
- <?php
+
  $conn = mysqli_connect('localhost', 'root', '', 'events');
 if (isset($_POST['submit'])) {
     $username=mysqli_real_escape_string($conn, $_POST['username']);
