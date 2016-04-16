@@ -28,17 +28,23 @@
       <section class="introduction-notes">
         <p>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
           Текст
         </p>
       </section>
       <section class="login-form">
         <form class="login" action="index.php?location=login" method="POST">
+<<<<<<< HEAD
+=======
 =======
           Текст ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТест
         </p>
       </section>
       <section class="login-form">
         <form class="login" action="login.php" method="POST">
+>>>>>>> origin/master
 >>>>>>> origin/master
           <fieldset>
             <label for="username">Потребителско име</label>
@@ -55,7 +61,11 @@
 <<<<<<< HEAD
         <form class="register" action="index.php?location=register" method="POST">
 =======
+<<<<<<< HEAD
+        <form class="register" action="index.php?location=register" method="POST">
+=======
         <form class="register" action="register.php" method="POST">
+>>>>>>> origin/master
 >>>>>>> origin/master
           <fieldset>
             <label for="username">Потребителско име</label>

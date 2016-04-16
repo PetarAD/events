@@ -30,4 +30,8 @@ echo "yes";
 <<<<<<< HEAD
 ?>
 =======
+<<<<<<< HEAD
+?>
+=======
+>>>>>>> origin/master
 >>>>>>> origin/master

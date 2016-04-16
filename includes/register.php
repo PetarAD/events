@@ -8,6 +8,9 @@ if (!empty($_POST['submit'])) {
   $last=mysqli_real_escape_string($conn, $_POST['last-name']);
  // var_dump($_POST);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
  $password=md5($password);
     $insert_query ="INSERT INTO user( username, password, email, first_name, last_name) VALUES ('$username','$password','$mail','$name','$last')";
     $insert_result= mysqli_query($conn, $insert_query);
@@ -17,6 +20,8 @@ if (!empty($_POST['submit'])) {
       echo "Неуспешна регистрация";
     }
 
+<<<<<<< HEAD
+=======
 =======
     $insert_query ="INSERT INTO user( username, password, email, first_name, last_name) VALUES ('$username','$password','$mail','$name','$last')";
     $insert_result= mysqli_query($conn, $insert_query);
@@ -27,6 +32,7 @@ if (!empty($_POST['submit'])) {
     } elseif ($insert_result) {
       echo  "Успешно се регистрирахте.";
     }
+>>>>>>> origin/master
 >>>>>>> origin/master
   }
  ?>
