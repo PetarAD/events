@@ -7,6 +7,7 @@ if (!empty($_POST['submit'])) {
   $name=mysqli_real_escape_string($conn, $_POST['name']);
   $last=mysqli_real_escape_string($conn, $_POST['last-name']);
  // var_dump($_POST);
+<<<<<<< HEAD
  $password=md5($password);
     $insert_query ="INSERT INTO user( username, password, email, first_name, last_name) VALUES ('$username','$password','$mail','$name','$last')";
     $insert_result= mysqli_query($conn, $insert_query);
@@ -16,5 +17,16 @@ if (!empty($_POST['submit'])) {
       echo "Неуспешна регистрация";
     }
 
+=======
+    $insert_query ="INSERT INTO user( username, password, email, first_name, last_name) VALUES ('$username','$password','$mail','$name','$last')";
+    $insert_result= mysqli_query($conn, $insert_query);
+    $password=md5($password);
+
+    if(!preg_match('/^\p{L}[\p{L} _.-]+$/u', $name) || empty($name)) {
+      echo "<p>Неправилен формат на името.</p>";
+    } elseif ($insert_result) {
+      echo  "Успешно се регистрирахте.";
+    }
+>>>>>>> origin/master
   }
  ?>
