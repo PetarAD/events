@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $_SESSION["username"]=$username;
     $_SESSION["password"]=$password;
 
-    var_dump($_SESSION);
+  //  var_dump($_SESSION);
   $read_query = 	"SELECT * FROM `user`";
   $read_result = mysqli_query($conn, $read_query);
   	if (mysqli_num_rows($read_result) > 0) {
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
   if ($username==$row['username']) {
     if ($password==$row['password']) {
 echo "yes";
-//header ('Location:index.php');
+header ('Location:http://localhost/events/includes/category.php');
     }
     else {
       echo "You have worng password";
@@ -27,11 +27,4 @@ echo "yes";
 }
 }
 }
-<<<<<<< HEAD
 ?>
-=======
-<<<<<<< HEAD
-?>
-=======
->>>>>>> origin/master
->>>>>>> origin/master

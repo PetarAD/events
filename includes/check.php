@@ -1,4 +1,7 @@
 <?php
+session_start();
+$_SESSION["username"];
+$_SESSION["password"];
     $conn = mysqli_connect('localhost', 'root', '', 'events');
     if(empty($_POST['submit'])){
     	$id = $_GET['id'];
