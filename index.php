@@ -30,6 +30,19 @@
           Текст
         </p>
       </section>
+      <section class="login-form">
+        <form class="login" action="login.php" method="POST">
+          <fieldset>
+            <label for="username">Потребителско име</label>
+            <input id="username" type="text" name="username" placeholder="Въведете потребителско име.">
+          </fieldset>
+          <fieldset>
+            <label for="password">Парола:</label>
+            <input id="password" type="password" name="password" placeholder="Въведете парола.">
+          </fieldset>
+          <input type="submit" name="submit" value="Влез">
+        </form>
+      </section>
       <section class="register-form">
         <form class="register" action="register.php" method="POST">
           <fieldset>
