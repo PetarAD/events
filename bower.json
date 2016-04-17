@@ -1,0 +1,25 @@
+{
+  "name": "vratsa-share",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "excellent6 <excellent6@abv.bg>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./assets/components/",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "normalize.css#^4.1.1",
+    "html5shiv": "^3.7.3",
+    "font-awesome": "^4.6.1"
+  }
+}

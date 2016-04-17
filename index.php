@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="./assets/components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="./assets/components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/layout/main.css">
     <!--[if lt IE 9]>
     <script src="./assets/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
@@ -14,44 +16,14 @@
     <div class="container">
       <?php include './modules/header.php'; ?>
       <?php include './modules/navigation.php'; ?>
-      <?php
-        if(isset($_GET['location'])) {
-          $locationFile = $_GET['location'];
-          $locationDir = './includes/'.$locationFile.'.php';
-          if (file_exists($locationDir)) {
-            include $locationDir;
-          } else {
-            header('Location: notfound.php');
-          }
-        }
-      ?>
-      <section class="introduction-notes">
-        <p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
->>>>>>> origin/master
-          Текст
-        </p>
+      <main>
+      <div class="home-content">
+      <section class="introduction">
+        „Споделям враца” е сайт създаден с идеята да свърже хората от враца. Споделяйки моменти и спомени ние сближаваме хората. освен забавлението ние развиваме и кулртурата спорта, юдравето и науката. казузата ни е разнообрази сивия град и да свържем усмивките на хората.
       </section>
-      <section class="login-form">
-        <form class="login" action="index.php?location=login" method="POST">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-          Текст ТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТекстТест
-        </p>
-      </section>
-      <section class="login-form">
+      <section class="form-container">
         <form class="login" action="login.php" method="POST">
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
+
           <fieldset>
             <label for="username">Потребителско име</label>
             <input id="username" type="text" name="username" placeholder="Въведете потребителско име.">
@@ -60,23 +32,11 @@
             <label for="password">Парола:</label>
             <input id="password" type="password" name="password" placeholder="Въведете парола.">
           </fieldset>
-          <input type="submit" name="submit" value="Влез">
+          <fieldset><input type="submit" name="submit" value="Влез"></fieldset>
+
         </form>
-      </section>
-      <section class="register-form">
-<<<<<<< HEAD
-        <form class="register" action="index.php?location=register" method="POST">
-=======
-<<<<<<< HEAD
-        <form class="register" action="index.php?location=register" method="POST">
-=======
-<<<<<<< HEAD
-        <form class="register" action="index.php?location=register" method="POST">
-=======
         <form class="register" action="register.php" method="POST">
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
+
           <fieldset>
             <label for="username">Потребителско име</label>
             <input id="username" type="text" name="username" placeholder="Въведете потребителско име.">
@@ -84,10 +44,6 @@
           <fieldset>
             <label for="password">Парола:</label>
             <input id="password" type="password" name="password" placeholder="Въведете парола.">
-          </fieldset>
-          <fieldset>
-            <label for="repeat-password">Повторете паролата:</label>
-            <input id="repeat-password" type="password" name="repeat-password" placeholder="Паролата отново.">
           </fieldset>
           <fieldset>
             <label for="email">Електронна поща</label>
@@ -101,11 +57,14 @@
             <label for="last-name">Фамилия</label>
             <input id="last-name" type="text" name="last-name" placeholder="Въведете фамилия">
           </fieldset>
-          <input type="submit" name="submit" value="Регистрирай се">
+          <fieldset>
+            <input type="submit" name="submit" value="Регистрирай се">
+          </fieldset>
         </form>
-      </section>
-
+    </section>
+      </main>
       <?php include './modules/footer.php'; ?>
+    </div>
     </div>
   </body>
 </html>

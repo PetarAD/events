@@ -3,6 +3,7 @@
 # -------------------------------------------------------------
 gulp = require 'gulp'
 browserSync = require 'browser-sync'
+sass = require 'gulp-sass'
 
 # -------------------------------------------------------------
 # Task: BrowserSync
@@ -15,6 +16,17 @@ gulp.task 'browserSync', ->
         match: /$/
   }
 
+# -------------------------------------------------------------
+# Task: Sass
+# -------------------------------------------------------------
+gulp.task 'sass', ->
+  gulp.src './assets/layout/*.sass'
+  .pipe sass({indentedSyntax: true})
+  .pipe gulp.dest './assets/layout/'
+
+
+gulp.task 'sass:watch', ->
+  gulp.watch './assets/layout/*.sass', ['sass']
 # -------------------------------------------------------------
 # Task: Default / Watch
 # -------------------------------------------------------------
